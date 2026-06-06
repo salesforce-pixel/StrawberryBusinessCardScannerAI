@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+    <types>
+        <members>businessCardScanner</members>
+        <name>LightningComponentBundle</name>
+    </types>
+    <types>
+        <members>BusinessCardController</members>
+        <members>AI_businessCardAnalyzer</members>
+        <name>ApexClass</name>
+    </types>
+    <types>
+        <members>Business_Card_Scanner_Prompt</members>
+        <name>GenAiPromptTemplate</name>
+    </types>
+    <types>
+        <members>strawberryLogo</members>
+        <name>StaticResource</name>
+    </types>
+    <version>66.0</version>
+</Package>

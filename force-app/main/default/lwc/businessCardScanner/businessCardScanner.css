@@ -1,0 +1,441 @@
+/* =========================================================================
+   Business Card Scanner — Strawberry Hotels theme
+   Palette derived from the official Strawberry logo (warm coral + white).
+   ========================================================================= */
+
+:host {
+    --bcs-coral: #e2685a;        /* Strawberry brand coral */
+    --bcs-coral-dark: #c85546;   /* hover / active */
+    --bcs-coral-soft: #fdeeeb;   /* tinted surface */
+    --bcs-ink: #1d1d1b;          /* near-black text */
+    --bcs-muted: #6b6661;        /* secondary text */
+    --bcs-amber: #e0922b;        /* duplicate / caution accent */
+    --bcs-bg: #fbf8f6;           /* warm off-white */
+    --bcs-surface: #ffffff;
+    --bcs-border: #ece6e1;
+    --bcs-radius: 16px;
+    --bcs-radius-sm: 10px;
+    --bcs-shadow: 0 1px 2px rgba(29, 29, 27, 0.05), 0 10px 30px rgba(29, 29, 27, 0.07);
+
+    display: block;
+    color: var(--bcs-ink);
+    font-family: "Salesforce Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+}
+
+.bcs-root {
+    background: var(--bcs-surface);
+    border: 1px solid var(--bcs-border);
+    border-radius: var(--bcs-radius);
+    box-shadow: var(--bcs-shadow);
+    overflow: hidden;
+    max-width: 640px;
+    margin: 0 auto;
+}
+
+/* ---- Brand header (light, Nordic-minimal) ---- */
+.bcs-brand {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem;
+    padding: 1rem 1.25rem;
+    background: var(--bcs-surface);
+    border-bottom: 1px solid var(--bcs-border);
+    box-shadow: inset 0 -3px 0 var(--bcs-coral);
+}
+
+.bcs-brand-mark {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    min-width: 0;
+}
+
+.bcs-logo {
+    width: 42px;
+    height: 42px;
+    border-radius: 11px;
+    object-fit: cover;
+    flex-shrink: 0;
+    box-shadow: 0 2px 6px rgba(226, 104, 90, 0.35);
+}
+
+.bcs-brand-name {
+    margin: 0;
+    font-size: 1.05rem;
+    font-weight: 700;
+    letter-spacing: 0.01em;
+    line-height: 1.1;
+    color: var(--bcs-ink);
+}
+
+.bcs-brand-sub {
+    margin: 0.1rem 0 0;
+    font-size: 0.68rem;
+    color: var(--bcs-muted);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+}
+
+.bcs-brand-icon {
+    --slds-c-icon-color-foreground-default: var(--bcs-coral);
+    flex-shrink: 0;
+}
+
+/* ---- Body ---- */
+.bcs-body {
+    padding: 1.25rem;
+    background: var(--bcs-bg);
+}
+
+/* ---- Step blocks ---- */
+.bcs-step {
+    background: var(--bcs-surface);
+    border: 1px solid var(--bcs-border);
+    border-radius: var(--bcs-radius);
+    padding: 1rem 1.1rem;
+    margin-bottom: 1rem;
+}
+
+.bcs-step-result {
+    border-color: #f4d6d0;
+    background: linear-gradient(180deg, var(--bcs-coral-soft) 0%, var(--bcs-surface) 58%);
+}
+
+.bcs-step-head {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.7rem;
+    margin-bottom: 0.9rem;
+}
+
+.bcs-step-num {
+    flex-shrink: 0;
+    width: 1.65rem;
+    height: 1.65rem;
+    border-radius: 50%;
+    background: var(--bcs-coral);
+    color: #fff;
+    font-size: 0.85rem;
+    font-weight: 700;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+}
+
+.bcs-step-num-alt {
+    background: var(--bcs-amber);
+}
+
+.bcs-step-title {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.25;
+}
+
+.bcs-step-desc {
+    margin: 0.15rem 0 0;
+    font-size: 0.8rem;
+    color: var(--bcs-muted);
+}
+
+/* ---- Upload ---- */
+.bcs-upload {
+    border: 1.5px dashed #e0cfc9;
+    border-radius: var(--bcs-radius-sm);
+    padding: 1.25rem 1rem;
+    text-align: center;
+    background: var(--bcs-bg);
+    transition: border-color 0.15s ease, background 0.15s ease;
+}
+
+.bcs-upload:hover {
+    border-color: var(--bcs-coral);
+    background: var(--bcs-coral-soft);
+}
+
+.bcs-upload-icon {
+    --slds-c-icon-color-foreground-default: var(--bcs-coral);
+    margin-bottom: 0.4rem;
+}
+
+.bcs-upload-title {
+    margin: 0;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.bcs-upload-hint {
+    margin: 0.2rem 0 0.6rem;
+    font-size: 0.75rem;
+    color: var(--bcs-muted);
+}
+
+.bcs-upload-input {
+    margin-top: 0.4rem;
+}
+
+.bcs-file-name {
+    margin-top: 0.6rem;
+    font-size: 0.75rem;
+    color: var(--bcs-ink);
+}
+
+.bcs-file-name span {
+    font-weight: 600;
+}
+
+/* ---- Preview ---- */
+.bcs-preview {
+    margin-top: 0.9rem;
+    border-radius: var(--bcs-radius-sm);
+    overflow: hidden;
+    border: 1px solid var(--bcs-border);
+    background: #fff;
+    max-height: 260px;
+}
+
+.bcs-preview img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+/* ---- Actions / buttons ---- */
+.bcs-actions {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    margin-bottom: 1rem;
+}
+
+.bcs-actions-end {
+    justify-content: flex-end;
+    margin-bottom: 0;
+    margin-top: 0.9rem;
+}
+
+/* Brand the SLDS "brand" button via styling hooks (coral) */
+.bcs-btn-brand {
+    --slds-c-button-brand-color-background: var(--bcs-coral);
+    --slds-c-button-brand-color-border: var(--bcs-coral);
+    --slds-c-button-brand-color-background-hover: var(--bcs-coral-dark);
+    --slds-c-button-brand-color-border-hover: var(--bcs-coral-dark);
+    --slds-c-button-brand-color-background-active: var(--bcs-coral-dark);
+    --slds-c-button-brand-color-border-active: var(--bcs-coral-dark);
+    --slds-c-button-brand-color-background-focus: var(--bcs-coral-dark);
+    --slds-c-button-brand-color-border-focus: var(--bcs-coral-dark);
+}
+
+/* ---- Spinner ---- */
+.bcs-spinner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0.25rem 0 1rem;
+}
+
+.bcs-spinner-text {
+    margin-top: 0.4rem;
+    font-size: 0.8rem;
+    color: var(--bcs-muted);
+    text-align: center;
+}
+
+/* ---- Status banner ---- */
+.bcs-status {
+    font-size: 0.8rem;
+    border-radius: var(--bcs-radius-sm);
+    margin-bottom: 1rem;
+}
+
+/* ---- Extracted fields grid ---- */
+.bcs-fields {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0.1rem;
+}
+
+@media (min-width: 480px) {
+    .bcs-fields {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        column-gap: 1.5rem;
+    }
+}
+
+.bcs-field {
+    display: flex;
+    align-items: baseline;
+    gap: 0.5rem;
+    padding: 0.45rem 0;
+    border-bottom: 1px solid var(--bcs-border);
+    font-size: 0.82rem;
+}
+
+.bcs-field-label {
+    flex-shrink: 0;
+    min-width: 6rem;
+    font-weight: 600;
+    color: var(--bcs-muted);
+}
+
+.bcs-field-value {
+    color: var(--bcs-ink);
+    word-break: break-word;
+}
+
+/* ---- Existing lead card ---- */
+.bcs-existing {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.6rem;
+    padding: 0.8rem;
+    border-radius: var(--bcs-radius-sm);
+    background: var(--bcs-bg);
+    border: 1px solid var(--bcs-border);
+}
+
+.bcs-existing-text {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+}
+
+.bcs-existing-name {
+    margin: 0;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.bcs-existing-sub {
+    margin: 0.05rem 0;
+    font-size: 0.75rem;
+    color: var(--bcs-muted);
+    word-break: break-word;
+}
+
+/* duplicate action row: review (open) on the left, overwrite on the right */
+.bcs-existing-actions {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.6rem;
+    margin-top: 0.9rem;
+}
+
+/* ---- "Open Lead" links ---- */
+.bcs-view-lead {
+    margin-bottom: 1rem;
+}
+
+.bcs-view-lead-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4rem;
+    text-decoration: none;
+    background: var(--bcs-coral-soft);
+    padding: 0.5rem 0.85rem;
+    border-radius: var(--bcs-radius-sm);
+    border: 1px solid #f4d6d0;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--bcs-coral-dark);
+    white-space: nowrap;
+}
+
+.bcs-view-lead-link:hover {
+    background: #fbe0db;
+}
+
+.bcs-view-lead-icon {
+    --slds-c-icon-color-foreground-default: var(--bcs-coral-dark);
+}
+
+/* ---- Completion panel ---- */
+.bcs-done {
+    border: 1px solid #cfe9d6;
+    background: linear-gradient(180deg, #f1faf3 0%, var(--bcs-surface) 70%);
+    border-radius: var(--bcs-radius);
+    padding: 1rem 1.1rem;
+    margin-bottom: 1rem;
+}
+
+.bcs-done-head {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    margin-bottom: 0.9rem;
+}
+
+.bcs-done-icon {
+    flex-shrink: 0;
+}
+
+.bcs-done-title {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.bcs-done-sub {
+    margin: 0.1rem 0 0;
+    font-size: 0.8rem;
+    color: var(--bcs-muted);
+}
+
+.bcs-done-actions {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.6rem;
+}
+
+/* ---- Mobile optimization ---- */
+@media (max-width: 479px) {
+    .bcs-body {
+        padding: 1rem;
+    }
+
+    .bcs-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .bcs-actions lightning-button {
+        width: 100%;
+    }
+
+    .bcs-existing-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .bcs-existing-actions .bcs-view-lead-link {
+        width: 100%;
+    }
+
+    .bcs-existing-actions lightning-button {
+        width: 100%;
+    }
+
+    .bcs-done-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .bcs-done-actions .bcs-view-lead-link {
+        width: 100%;
+    }
+
+    .bcs-done-actions lightning-button {
+        width: 100%;
+    }
+
+    .bcs-brand-sub {
+        font-size: 0.62rem;
+    }
+}
