@@ -1,3 +1,11 @@
+/**
+ * Business Card Scanner — Einstein extraction.
+ *
+ * Calls the "Business_Card_Scanner_Prompt" Einstein prompt template to extract
+ * structured contact details from a business card image.
+ *
+ * @author Rajeev Shekhar
+ */
 public without sharing class AI_businessCardAnalyzer {
     
     

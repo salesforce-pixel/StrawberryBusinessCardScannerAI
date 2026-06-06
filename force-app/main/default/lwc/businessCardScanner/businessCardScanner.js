@@ -1,3 +1,9 @@
+/**
+ * Business Card Scanner LWC — capture a business card image, extract contact
+ * details with Einstein, and create or update a Salesforce Lead.
+ *
+ * @author Rajeev Shekhar
+ */
 import { LightningElement, api, track } from 'lwc';
 import extractFromCard from '@salesforce/apex/BusinessCardController.extractFromCard';
 import findLead from '@salesforce/apex/BusinessCardController.findLead';

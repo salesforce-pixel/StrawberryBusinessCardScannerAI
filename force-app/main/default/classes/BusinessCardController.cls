@@ -1,3 +1,11 @@
+/**
+ * Business Card Scanner — Lead controller.
+ *
+ * Aura endpoints for the businessCardScanner LWC: extract card data via the
+ * Einstein prompt template, find a matching Lead, and create/update Leads.
+ *
+ * @author Rajeev Shekhar
+ */
 public with sharing class BusinessCardController {
 
     // ----------------------------------------------------------

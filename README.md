@@ -46,11 +46,14 @@ businessCardScanner (LWC)
   model) accepts image input in **Setup → Prompt Builder**.
 - API version **66.0** (see `sfdx-project.json`).
 
-## Deploy
+## Validate & Deploy
 
 ```bash
 # authorize your org (once)
 sf org login web --alias myOrg
+
+# validate first — check-only deploy, makes NO changes to the org
+sf project deploy validate --manifest manifest/package.xml --target-org myOrg
 
 # deploy the feature
 sf project deploy start --manifest manifest/package.xml --target-org myOrg
@@ -69,3 +72,7 @@ Lightning App Builder.
 - Brand colors approximate the official Strawberry palette (warm coral `#e2685a`);
   adjust the CSS custom properties in `businessCardScanner.css` to match exact brand
   guidelines.
+
+## Author
+
+**Rajeev Shekhar**
