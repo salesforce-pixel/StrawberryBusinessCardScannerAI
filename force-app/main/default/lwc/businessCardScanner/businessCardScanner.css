@@ -1,12 +1,14 @@
 /* =========================================================================
    Business Card Scanner — Strawberry Hotels theme
-   Palette derived from the official Strawberry logo (warm coral + white).
+   Warm, joyful, rounded identity (per Strawberry brand). Coral sampled from
+   the official Strawberry logo (#ea695e) paired with white + warm off-white.
    Author: Rajeev Shekhar
    ========================================================================= */
 
 :host {
-    --bcs-coral: #e2685a;        /* Strawberry brand coral */
-    --bcs-coral-dark: #c85546;   /* hover / active */
+    --bcs-coral: #ea695e;        /* Strawberry brand coral (sampled from official logo) */
+    --bcs-coral-dark: #c85546;   /* button base — contrast-safe with white text */
+    --bcs-coral-deep: #b3493b;   /* button hover / active */
     --bcs-coral-soft: #fdeeeb;   /* tinted surface */
     --bcs-ink: #1d1d1b;          /* near-black text */
     --bcs-muted: #6b6661;        /* secondary text */
@@ -58,7 +60,7 @@
     border-radius: 11px;
     object-fit: cover;
     flex-shrink: 0;
-    box-shadow: 0 2px 6px rgba(226, 104, 90, 0.35);
+    box-shadow: 0 2px 6px rgba(234, 105, 94, 0.35);
 }
 
 .bcs-brand-name {
@@ -219,16 +221,18 @@
     margin-top: 0.9rem;
 }
 
-/* Brand the SLDS "brand" button via styling hooks (coral) */
+/* Brand the SLDS "brand" button via styling hooks.
+   Base uses the deeper coral so white label text meets contrast (AA);
+   hover/active darken further for clear affordance. */
 .bcs-btn-brand {
-    --slds-c-button-brand-color-background: var(--bcs-coral);
-    --slds-c-button-brand-color-border: var(--bcs-coral);
-    --slds-c-button-brand-color-background-hover: var(--bcs-coral-dark);
-    --slds-c-button-brand-color-border-hover: var(--bcs-coral-dark);
-    --slds-c-button-brand-color-background-active: var(--bcs-coral-dark);
-    --slds-c-button-brand-color-border-active: var(--bcs-coral-dark);
-    --slds-c-button-brand-color-background-focus: var(--bcs-coral-dark);
-    --slds-c-button-brand-color-border-focus: var(--bcs-coral-dark);
+    --slds-c-button-brand-color-background: var(--bcs-coral-dark);
+    --slds-c-button-brand-color-border: var(--bcs-coral-dark);
+    --slds-c-button-brand-color-background-hover: var(--bcs-coral-deep);
+    --slds-c-button-brand-color-border-hover: var(--bcs-coral-deep);
+    --slds-c-button-brand-color-background-active: var(--bcs-coral-deep);
+    --slds-c-button-brand-color-border-active: var(--bcs-coral-deep);
+    --slds-c-button-brand-color-background-focus: var(--bcs-coral-deep);
+    --slds-c-button-brand-color-border-focus: var(--bcs-coral-deep);
 }
 
 /* ---- Spinner ---- */
